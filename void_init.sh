@@ -16,12 +16,14 @@ make
 sudo make install
 cd ..
 
-# Build and install dwm
-git clone https://github.com/tylerpnn/dwm
-cd ./dwm
-make
-sudo make install
-cd ..
+if [ "$WM" = "dwm" ]; then
+	# Build and install dwm
+	git clone https://github.com/tylerpnn/dwm
+	cd ./dwm
+	make
+	sudo make install
+	cd ..
+fi
 
 # Clone dotfiles and copy the essential ones
 git clone https://github.com/tylerpnn/dotfiles_void
