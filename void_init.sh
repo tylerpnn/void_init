@@ -28,7 +28,7 @@ git clone https://github.com/tylerpnn/dotfiles_void
 cd ./dotfiles_void
 git fetch origin $WM
 git checkout $WM
-cp -rf ./* $HOME/
+cp -rf .* $HOME/
 cd $HOME
 rm -rf .git
 rm .zprofile .bash_profile
@@ -48,7 +48,8 @@ sudo mv ./Discord /usr/share/discord
 sudo ln -s /usr/share/discord/Discord /usr/bin/Discord
 
 # Install iwd
-sudo xbps-install -Sy iwd
+sudo xbps-install -Sy iwd dbus
+sudo ln -s /etc/sv/dbus /var/service
 sudo ln -s /etc/sv/iwd /var/service
 
 # Finally, change shell to zsh
