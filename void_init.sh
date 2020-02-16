@@ -44,9 +44,10 @@ git clone https://github.com/tylerpnn/dotfiles_void
 cd dotfiles_void
 git fetch origin $WM
 git checkout $WM
-cp -rf .* $HOME/
+cp -f .* $HOME
+cp -rf .config $HOME
+cp -rf .local $HOME
 cd $HOME
-rm -rf .git
 rm .zprofile .bash_profile
 ln -s .profile .zprofile
 ln -s .profile .bash_profile
