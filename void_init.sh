@@ -3,8 +3,13 @@
 # VOID SETUP SCRIPT
 WM=$1
 
+if [ "$WM" = "" ]; then
+	echo "Please specify a WM"
+	exit 1
+fi
+
 # Install base packages
-sudo xbps-install -Sy acpi alsa-firmware alsa-tools alsa-utils base-devel chromium cifs-utils cmake curl dbus-glib dmenu feh ffmpeg font-symbola fonts-nanum-ttf fonts-nanum-ttf-extra gimp git htop inxi ipafont-fonts-otf libX11-devel libXft-devel libXinerama-devel lm_sensors maim mpv neofetch neovim plex-media-player ranger tmux wget xclip xcompmgr xorg xwallpaper zsh
+sudo xbps-install -Sy acpi alsa-firmware alsa-tools alsa-utils base-devel chromium cifs-utils cmake curl dbus-glib dmenu feh ffmpeg font-symbola fonts-nanum-ttf fonts-nanum-ttf-extra gimp git htop inxi ipafont-fonts-otf libX11-devel libXft-devel libXinerama-devel lm_sensors maim mpv neofetch neovim plex-media-player ranger tmux wget xclip xcompmgr xorg xwallpaper zsh deadbeef deadbeef-fb deadbeef-waveform-seekbar
 
 mkdir -p $HOME/git
 
@@ -32,7 +37,7 @@ if [ "$WM" = "dwm" ]; then
 fi
 
 if [ "$WM" = "kde5" ]; then
-	sudo xbps-install -Sy kde5 dolphin udisks2 xdg-desktop-portal xdg-desktop-portal-gtk xdg-user-dirs xdg-user-dirs-gtk NetworkManager
+	sudo xbps-install -Sy kde5 dolphin udisks2 xdg-desktop-portal xdg-desktop-portal-gtk xdg-user-dirs xdg-user-dirs-gtk
 	sudo ln -s /etc/sv/dbus /var/service
 	sudo ln -s /etc/sv/sddm /var/service
 	sudo usermod -a -G storage $USER
