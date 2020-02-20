@@ -9,7 +9,7 @@ if [ "$WM" = "" ]; then
 fi
 
 # Install base packages
-sudo xbps-install -Sy acpi alsa-firmware alsa-tools alsa-utils base-devel chromium cifs-utils cmake curl dbus-glib dmenu feh ffmpeg font-symbola fonts-nanum-ttf fonts-nanum-ttf-extra gimp git htop inxi ipafont-fonts-otf libX11-devel libXft-devel libXinerama-devel lm_sensors maim mpv neofetch neovim plex-media-player ranger tmux wget xclip xcompmgr xorg xwallpaper zsh deadbeef deadbeef-fb deadbeef-waveform-seekbar
+sudo xbps-install -Sy acpi alsa-firmware alsa-tools alsa-utils base-devel chromium cifs-utils cmake curl dbus-glib dmenu feh ffmpeg font-symbola fonts-nanum-ttf fonts-nanum-ttf-extra gimp git htop inxi ipafont-fonts-otf libX11-devel libXft-devel libXinerama-devel libXmu-devel libXtst-devel lm_sensors maim mpv neofetch neovim plex-media-player psmisc ranger tmux wget xclip xcompmgr xorg xwallpaper zsh deadbeef deadbeef-fb deadbeef-waveform-seekbar
 
 mkdir -p $HOME/git
 
