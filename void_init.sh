@@ -61,13 +61,13 @@ ln -s .profile .bash_profile
 sudo xbps-install -Sy alsa-lib dbus-glib gtk+3 GConf libnotify nss libXtst libcxx libatomic
 mkdir -p $HOME/Downloads
 cd $HOME/Downloads
-wget https://dl.discordapp.net/apps/linux/0.0.9/discord-0.0.9.tar.gz
-tar -xzf ./discord-0.0.9.tar.gz
+wget https://dl.discordapp.net/apps/linux/0.0.12/discord-0.0.12.tar.gz
+tar -xzf ./discord-0.0.12.tar.gz
 chmod +x ./Discord/Discord
 sudo cp ./Discord/discord.desktop /usr/share/applications
 sudo cp ./Discord/discord.png /usr/share/pixmaps
 sudo mv ./Discord /usr/share/discord
-sudo ln -s /usr/share/discord/Discord /usr/bin/Discord
+sudo ln -s /usr/share/discord/Discord /usr/bin/discord
 
 # Finally, change shell to zsh
 chsh -s `which zsh` $USER
